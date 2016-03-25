@@ -85,6 +85,7 @@ function draw(id) {
         context.drawImage(imgHome, 1250, 550, 100, 100);
         shell(context, imgShell);
         setmonsterC(context, imgMonsterC);
+        setdod(context,imgdod,dod.x,dod.y);
     }
     imgPlayer = new Image;
     imgPlayer.src = "img/bob2.png";
@@ -95,25 +96,25 @@ function draw(id) {
             player.y = 500
         }
         else if ((monster.x - player.x) < 40 && (monster.x - player.x) > -40 && (monster.y - player.y) < 40 && (monster.y - player.y) > -40) {
-            alert("Bob has been caught by Zombie Mushroom!!!");
+            alert("Bob has been caught by Squid!!!");
             player.x = 50;
             player.y = 50;
             player.speed = 3;
         }
         else if ((monsterD.x - player.x) < 40 && (monsterD.x - player.x) > -40 && (monsterD.y - player.y) < 30 && (monsterD.y - player.y) > -90) {
-            alert("Bob has been caught by Gloomy Bear!!!");
+            alert("Bob has been caught by Seal!!!");
             initplayer();
         }
         else if ((monsterE.x - player.x) < 40 && (monsterE.x - player.x) > -40 && (monsterE.y - player.y) < 30 && (monsterE.y - player.y) > -90) {
-            alert("Bob has been caught by Crazy Gloomy Bear!!!");
+            alert("Bob has been caught by Seal!!!");
             initplayer();
         }
         else if ((monsterB.x - player.x) < 40 && (monsterB.x - player.x) > -40 && (monsterB.y - player.y) < 40 && (monsterB.y - player.y) > -40) {
-            alert("Bob has been caught by Green Light!!!");
+            alert("Bob has been caught by Clownfish!!!");
             initplayer();
         }
         else if ((monsterC.x - player.x) < 40 && (monsterC.x - player.x) > -40 && (monsterC.y - player.y) < 40 && (monsterC.y - player.y) > -40) {
-            alert("Bob has been caught by Green Light!!!");
+            alert("Bob has been caught by Shark!!!");
             initplayer();
         }
 
