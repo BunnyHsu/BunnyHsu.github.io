@@ -89,9 +89,10 @@ function draw(id) {
     imgPlayer.src = "img/bb.png";
     imgPlayer.onload = function () {
         if (player.x > 1230 && player.y > 530) {
-            alert("Bob has already been home");
+            alert("Congratulations for passing the 1st level!!!");
+            document.getElementById("skip").click();
             player.x = 1230;
-            player.y = 500
+            player.y = 500;
         }
         else if ((monster.x - player.x) < 40 && (monster.x - player.x) > -40 && (monster.y - player.y) < 40 && (monster.y - player.y) > -40) {
             alert("Bob has been caught by Zombie Mushroom!!!");
