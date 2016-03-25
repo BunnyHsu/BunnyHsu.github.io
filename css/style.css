@@ -131,3 +131,12 @@ a:hover {
     height: 90px;
     background: #ffffff;
 }
+.frame1
+{
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+    border-top-right-radius:5% ;
+    border: hidden;
+    box-shadow: lightgray 5px 5px 5px 5px;
+}
