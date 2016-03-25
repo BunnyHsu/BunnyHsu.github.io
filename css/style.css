@@ -1,0 +1,133 @@
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+@-webkit-keyframes auto {
+    0%
+    {
+        width: 90px;
+        height: 90px;
+        margin-top: 0px;
+    }
+    50%
+    {
+        width: 110px;
+        height: 110px;
+        margin-top: 20px;
+    }
+    100%
+    {
+        width: 90px;
+        height: 90px;
+        margin-top: 0px;
+    }
+}
+.play {
+    color: white;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+    background: coral;
+    border-radius: 50%;
+    transition: color 1s linear, background 1s linear, border-radius 1s linear;
+    -webkit-animation: auto 2s infinite;
+}
+
+.play:hover {
+    color: coral;
+    background: #ffffff;
+    border-radius: 0%;
+}
+
+.info {
+    left: 240px;
+    color: white;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+    background: cornflowerblue;
+    border-radius: 50%;
+    transition: color 1s linear, background 1s linear, border-radius 1s linear, height 1s linear, width 1s linear;
+}
+
+.info:hover {
+    height: 200px;
+    width: 200px;
+    color: cornflowerblue;
+    background: #ffffff;
+    border-radius: 0%;
+}
+.info:active {
+    height: 200px;
+    width: 200px;
+    color: #ffffff;
+    background: cornflowerblue;
+    border-radius: 20%;
+}
+
+.href1 {
+    color: white;
+    left: 480px;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+    background: lightcoral;
+    border-radius: 50%;
+    transition: color 1s linear, background 1s linear, border-radius 1s linear, height 1s linear, width 1s linear;;
+
+}
+
+.href1:hover {
+    height: 200px;
+    width: 200px;
+    color: lightcoral;
+    background: #ffffff;
+    border-radius: 0%;
+}
+.href1:active {
+    height: 200px;
+    width: 200px;
+    color: #ffffff;
+    background: lightcoral;
+    border-radius: 20%;
+}
+
+.href2 {
+    color: white;
+    left: 720px;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    font-family: "Comic Sans MS";
+    background: #866666;
+    border-radius: 50%;
+    transition: color 1s linear, background 1s linear, border-radius 1s linear, height 1s linear, width 1s linear;;
+
+}
+
+.href2:hover {
+    height: 200px;
+    width: 200px;
+    color: #866666;
+    background: #ffffff;
+    border-radius: 0%;
+}
+.href2:active {
+    height: 200px;
+    width: 200px;
+    color: #ffffff;
+    background:  #866666;
+    border-radius: 20%;
+}
+
+.head {
+    color: white;
+    padding-right: 0px;
+    height: 90px;
+    background: #ffffff;
+}
