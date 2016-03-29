@@ -1,38 +1,174 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Bob Go Home</title>
-    <link type="text/css" href="css/style.css" rel="stylesheet">
-    <script>
-        var width=document.documentElement.clientWidth;
-    </script>
+    <title>Bob The Game</title>
+    <script src='http://libs.baidu.com/jquery/2.1.4/jquery.min.js'></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/gif" href="favicon.gif">
 </head>
+
 <body>
-<div class="head" align="right">
+
+<div class="login">
+    <a href="#section4">
+        <button id="signup">Signup</button>
+    </a>
+    <a href="signin.html">
+        <button>Signin</button>
+    </a>
+
 </div>
-<iframe  src="iframeA.html" class="frame1" width="800px" height="450px" marginwidth="800px"></iframe>
-<br/>
-<a href="Bob.html">
-    <div class="play" align="center">
-        <h1>start</h1>
+<div class="hero-nav">
+    <div class="hero-nav__inner">
+        <h1>Bob The Game</h1>
     </div>
-</a>
-<div class="info" align="center">
-    <h1>information</br></br><h6>Designed by Bunny</br>Email:179346696@qq.com</h6></h1>
 </div>
-<a href="http://hannnnnah.github.io" target="_blank">
-    <div class="href1" align="center">
-        <h1>hannah</br></br><h6>Go to Hannah's website</h6></h1>
+
+<div id="navcontainer">
+    <ul id="navlist">
+        <li id="active"><a href="#" id="current">Home</a></li>
+        <li id="s2"><a href="#section2">About</a></li>
+        <li id="s3"><a href="#section3">News</a></li>
+        <li id="s4"><a href="#section4">Contact</a></li>
+        <li><a href="play.html">Play</a></li>
+    </ul>
+</div>
+<!----------------->
+<!--section1 HOME-->
+<!----------------->
+<p></p>
+<div class="sub-head">Background Story of Bob</div>
+<p></p>
+
+<div class="page-content">
+    Bob,who had made his living by dancing for a long time, at length escaped from his master.and returned to
+    his former companions in the woods.Bob was born in 2010, who was too young to go back home by himself.
+
+    <div class="hat-gif">
+        <img class="hat-gif" src="images/hat.gif" alt="three hats, a bowler, a flat cap and a floppy hat.">
     </div>
-</a>
-<a href="http://xyfreedom.uicp.cn" target="_blank">
-    <div class="href2" align="center">
-        <h1>steven</br></br><h6>Go to Steven's website</h6></h1>
+    <p>On the way to home, many monsters were willing to catch Bob. Bob had to escape from monsters' claws. Else, Bob would be the
+    dinner of monsters!</p>
+
+    <p>The game called<i> Bob Go Home </i>was coded in Javascript & Canvas. The game used simple cartoon images and smooth
+    background music. Using direction key to control hero's steps. Don't touch any monsters in the map.</p>
+
+    <p>Do you have a jet brain in designing games? Do you have a gift in drawing picture? Welcome to join us.</p>
+
+</div>
+<!------------------>
+<!--section2 ABOUT-->
+<!------------------>
+<span name="section2" id="section2"><div class="sub-head">About Bob Go Home</div></span>
+<div class="flexslider">
+    <ul class="slides">
+        <li>
+            <div class="banner-info">
+                <h1>The First Stage</h1>
+                <h2><span class="m_2">"</span>The Tough Desert<span class="m_2"> "</span></h2>
+                <p>"The Tough Desert" is the first stage of the game. The map was designed by BunnyHsu in March 18 2016. This
+                    map contains 5 kinds of monsters and an item. The stage is not easy to go cross for a beginner. In this
+                    stage, rocket is a important item which you must try to obtain. The rocket will make Bob speed up and
+                    escape cross monsters favourably.</p>
+                <h3>March 20 2016</h3>
+            </div>
+        </li>
+        <li>
+            <div class="banner-info">
+                <h1>The Second Stage</h1>
+                <h2><span class="m_2">"</span>The Capacious Sea<span class="m_2"> "</span></h2>
+                <p>"The Capacious Sea" is the second stage of the game. This stage was designed by BunnyHsu in March 23 2016. The
+                second stage is more difficult than the first stage. It's even difficult for a beginner to move a single step. Actually,
+                the second stage has a easy method to pass. What's the easy method? </p>
+                <h3>March 25 2016</h3>
+            </div>
+        </li>
+        <li>
+            <div class="banner-info">
+                <h1>More Stages</h1>
+                <h2><span class="m_2">"</span>The Abyss<span class="m_2">" </span></h2>
+                <p>"The Abyss" is the third stage of the game. It will contain Sprite in Canvas. The image will be much more brilliant!</p>
+                <h3>Coming Soon</h3>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<br>
+<br>
+<!----------------->
+<!--section3 NEWS-->
+<!----------------->
+<div class="section3" id="section3"></div>
+<div class="sub-head">News</div>
+<div id="slider">
+    <a class="control_next">></a>
+    <a class="control_prev"><</a>
+    <ul>
+        <li style="background: url('images/1.jpg')"></li>
+        <li style="background: url('images/2.jpg')"></li>
+        <li style="background: url('images/3.jpg')"></li>
+    </ul>
+</div>
+<script src="News.js"></script>
+
+
+<link href="css/flexslider.css" rel='stylesheet' type='text/css'/>
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+    $(function () {
+        SyntaxHighlighter.all();
+    });
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            start: function (slider) {
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
+<!----------------------------->
+<!--section4&section5 CONTACT-->
+<!----------------------------->
+<div class="sub-head">Contact</div>
+<form class="section4" id="section4">
+    <h2>CONTACT US</h2>
+    <p type="Name:"><input placeholder="Write your name here.."></p>
+    <p type="Email:"><input placeholder="Let us know how to contact you back.."></p>
+    <p type="Message:"><input placeholder="What would you like to tell us.."></p>
+    <button>Send Message</button>
+
+</form>
+<form class="section5">
+    <h2>JOIN US</h2>
+    <p type="Name:"><input placeholder="Write your name here.."></p>
+    <p type="Phone Number:"><input placeholder="Let us know how to message you back.."></p>
+    <p type="Password:"><input type="password" placeholder="Set your password"></p>
+    <button>Submit</button>
+
+</form>
+<!---------->
+<!--FOOTER-->
+<!---------->
+<div class="tilt"><img src="images/social.png">
+    <div class="socialTypes">
+        <p><a href="#">&nbsp;&nbsp;&nbsp; Tweet us on Twitter</a></p>
+        <p><a href="#">&nbsp;&nbsp;&nbsp; Follow us on FaceBook</a></p>
+        <p><a href="#">&nbsp;&nbsp;&nbsp; Circle us on Google +</a></p>
+        <p><a href="#">&nbsp;&nbsp;&nbsp; Watch us on YouTube</a></p>
     </div>
-</a>
-<!--<a href="Bob.html" >-->
-<!--<img src="1.png" width="100px" height="50px" >-->
-<!--</a>-->
+</div>
+
+<div class="footer">
+    <p class="footWords">&nbsp;&nbsp;<a href="#section2">About</a></p>
+    <p class="footWords">&nbsp;&nbsp;<a href="#">Contact</a></p>
+    <p class="footWords">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Designed by BunnyHsu</p>
+</div>
+<script src="js/index.js"></script>
+
+
 </body>
 </html>
