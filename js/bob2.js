@@ -1,6 +1,7 @@
 /**
- * Created by Bunny on 2016/3/21.
+ * Created by Bunny on 2016/3/24.
  */
+// code of game Bob go home stage 2
 var FPS = 60;
 setInterval(function () {
     draw("canvas");
@@ -22,19 +23,25 @@ var monsterB =
     x: 150,
     y: 150,
 }//Green light
+var monsterC =
+{
+    x:550,
+    y:550,
+}
 var monsterD =
 {
-    x: 800,
+    x: 200,
     y: 50,
-    step: 8,
+    step: 4,
 }
 var monsterE =
 {
-    x: 1100,
+    x: 400,
     y: 50,
-    step: 11,
+    step: 5,
 }
 var monsterBStep = 3;
+var monsterCStep =3;
 var monsterStep = 3;
 var tempx = monsterBStep;
 var tempy = 0;
@@ -61,69 +68,57 @@ function draw(id) {
     var context = carvas.getContext("2d");
     context.beginPath();
     imgHome = new Image;
-    imgHome.src = "img/home.png";
-    imgTree = new Image;
-    imgTree.src = "img/tree.png";
+    imgHome.src = "img/home2.png";
+    imgShell = new Image;
+    imgShell.src = "img/shell.png";
     imgMonster = new Image;
     imgMonsterD = new Image;
-    imgMonsterD.src = "img/monsterD.png"
-    imgMonsterE = new Image;
-    imgMonsterE.src = "img/monsterE.png"
-    imgMonster.src = "img/monster.png";
+    imgMonsterD.src = "img/seal.png"
+    imgMonster.src = "img/squid.png";
     imgMonsterB = new Image;
-    imgMonsterB.src = "img/monsterB.png";
-    imgRocket = new Image;
-    imgRocket.src = "img/rocket.png";
+    imgMonsterB.src = "img/fish.png";
     imgMap = new Image;
-    imgMap.src = "img/map.png";
+    imgMap.src = "img/map.jpg";
     imgMonsterC = new Image;
-    imgMonsterC.src = "img/monsterC.png";
+    imgMonsterC.src = "img/shark2.png";
     imgHome.onload = function () {
         drawmap(context, imgMap);
         context.drawImage(imgHome, 1250, 550, 100, 100);
-        context.drawImage(imgRocket, 600, 600, 50, 50);
-        tree(context, imgTree);
+        shell(context, imgShell);
         setmonsterC(context, imgMonsterC);
+        setdod(context,imgdod,dod.x,dod.y);
     }
     imgPlayer = new Image;
-    imgPlayer.src = "img/bb.png";
+    imgPlayer.src = "img/bob2.png";
     imgPlayer.onload = function () {
         if (player.x > 1230 && player.y > 530) {
-            alert("Congratulations for passing the 1st level!!!");
-            document.getElementById("skip").click();
+            alert("Bob has already been home");
             player.x = 1230;
-            player.y = 500;
+            player.y = 500
         }
         else if ((monster.x - player.x) < 40 && (monster.x - player.x) > -40 && (monster.y - player.y) < 40 && (monster.y - player.y) > -40) {
-            alert("Bob has been caught by Zombie Mushroom!!!");
+            alert("Bob has been caught by Squid!!!");
             player.x = 50;
             player.y = 50;
             player.speed = 3;
         }
-        else if ((monsterD.x - player.x) < 40 && (monsterD.x - player.x) > -60 && (monsterD.y - player.y) < 50 && (monsterD.y - player.y) > -50) {
-            alert("Bob has been caught by Gloomy Bear!!!");
+        else if ((monsterD.x - player.x) < 40 && (monsterD.x - player.x) > -40 && (monsterD.y - player.y) < 30 && (monsterD.y - player.y) > -90) {
+            alert("Bob has been caught by Seal!!!");
             initplayer();
         }
-        else if ((monsterE.x - player.x) < 40 && (monsterE.x - player.x) > -60 && (monsterE.y - player.y) < 50 && (monsterE.y - player.y) > -50) {
-            alert("Bob has been caught by Crazy Gloomy Bear!!!");
+        else if ((monsterE.x - player.x) < 40 && (monsterE.x - player.x) > -40 && (monsterE.y - player.y) < 30 && (monsterE.y - player.y) > -90) {
+            alert("Bob has been caught by Seal!!!");
             initplayer();
         }
-        else if (player.x > 570 && player.x < 620 && player.y > 570) {
-            player.speed = 10;
-        }//SPEED UP
-
         else if ((monsterB.x - player.x) < 40 && (monsterB.x - player.x) > -40 && (monsterB.y - player.y) < 40 && (monsterB.y - player.y) > -40) {
-            alert("Bob has been caught by Green Light!!!");
+            alert("Bob has been caught by Clownfish!!!");
             initplayer();
         }
-        else if ((600 - player.x) < 40 && (600 - player.x) > -40 && (50 - player.y) < 40 && (50 - player.y) > -40) {
-            alert("Bob has been caught by Snowman!!!");
+        else if ((monsterC.x - player.x) < 40 && (monsterC.x - player.x) > -40 && (monsterC.y - player.y) < 40 && (monsterC.y - player.y) > -40) {
+            alert("Bob has been caught by Shark!!!");
             initplayer();
         }
-        else if ((50 - player.x) < 40 && (50 - player.x) > -40 && (600 - player.y) < 40 && (600 - player.y) > -40) {
-            alert("Bob has been caught by Snowman!!!");
-            initplayer();
-        }
+
         else setplayer(context, imgPlayer, player.x, player.y);
     }
     imgMonsterD.onload = function () {
@@ -141,7 +136,7 @@ function draw(id) {
         setmonsterD(context, imgMonsterD, monsterD.x, monsterD.y);
 
     }
-    imgMonsterE.onload = function () {
+    imgShell.onload = function () {
         if (monsterE.y < 50) {
             monsterE.step = -monsterE.step;
             monsterE.y += monsterE.step;
@@ -153,7 +148,7 @@ function draw(id) {
         else {
             monsterE.y += monsterE.step;
         }
-        setmonsterD(context, imgMonsterE, monsterE.x, monsterE.y);
+        setmonsterD(context, imgMonsterD, monsterE.x, monsterE.y);
     }
     imgMonster.onload = function () {
         if (monster.x > 550 && monster.y < 100) {
@@ -172,6 +167,25 @@ function draw(id) {
         }
         setmonster(context, imgMonster, monster.x, monster.y);
     }
+    imgMonsterC.onload = function () {
+        if (monsterC.x > 550 && monsterC.y >550) {
+            monsterCStep = -monsterCStep;
+            monsterC.x += monsterCStep;
+            monsterC.y += monsterCStep;
+        }
+        else if (monsterC.x < 100 && monsterC.y < 100) {
+            monsterCStep = -monsterCStep;
+            monsterC.x += monsterCStep;
+            monsterC.y += monsterCStep;
+        }
+        else {
+            monsterC.x += monsterCStep;
+            monsterC.y += monsterCStep;
+        }
+        setmonster(context, imgMonsterC, monsterC.x, monsterC.y);
+    }
+
+
     imgMonsterB.onload = function () {
         if (monsterB.x > 550 && monsterB.y < 200) {
             tempx = 0;
@@ -204,7 +218,7 @@ function draw(id) {
         setmonster(context, imgMonsterB, monsterB.x, monsterB.y);
     }
 }
-function tree(context, image) {
+function shell(context, image) {
     for (var i = 0; i < 28; i++)
         context.drawImage(image, 0 + i * 50, 0, 50, 50);
     for (var i = 0; i < 14; i++)
@@ -222,13 +236,8 @@ function setplayer(context, image, x, y) {
     context.drawImage(image, x, y, 50, 50);
 }
 function setmonster(context, image, x, y) {
-    context.drawImage(image, x, y, 50, 50);
-}
-
-function setmonsterC(context, image) {
-    context.drawImage(image, 600, 50, 50, 50);
-    context.drawImage(image, 50, 600, 50, 50);
+    context.drawImage(image, x, y,65, 50);
 }
 function setmonsterD(context, image, x, y) {
-    context.drawImage(image, x, y, 80, 100);
+    context.drawImage(image, x, y, 60, 100);
 }

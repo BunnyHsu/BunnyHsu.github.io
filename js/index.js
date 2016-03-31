@@ -2,6 +2,7 @@ var heroShinker = function() {
     var hero = $('.hero-nav'),
         heroHeight = $('.hero-nav').outerHeight(true);
         $(hero).parent().css('padding-top', heroHeight);
+    
    // when clicking items , decreasing the height of hero
     $("#s2").click(function () {
         $(hero).css('height', (100));

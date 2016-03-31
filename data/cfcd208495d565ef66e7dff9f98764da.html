@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <title>Bob The Game</title>
     <script src='http://libs.baidu.com/jquery/2.1.4/jquery.min.js'></script>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/gif" href="images/favicon.gif">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/gif" href="../images/favicon.gif">
 </head>
 
 <body>
 
 <div class="login">
-    <a href="#section4">
-        <button id="signup">Signup</button>
+    <a>
+        <button id="signup">Welcome!Admin</button>
     </a>
-    <a href="signin.html">
-        <button id="signin">Signin</button>
+    <a href="../index.html">
+        <button id="signout">Signout</button>
     </a>
 
 </div>
@@ -32,7 +32,7 @@
         <li id="s2"><a href="#section2">About</a></li>
         <li id="s3"><a href="#section3">News</a></li>
         <li id="s4"><a href="#section4">Contact</a></li>
-        <li><a href="play.html">Play</a></li>
+        <li><a href="../play.html">Play</a></li>
     </ul>
 </div>
 <!----------------->
@@ -47,7 +47,7 @@
     his former companions in the woods.Bob was born in 2010, who was too young to go back home by himself.
 
     <div class="hat-gif">
-        <img class="hat-gif" src="images/hat.gif" alt="three hats, a bowler, a flat cap and a floppy hat.">
+        <img class="hat-gif" src="../images/hat.gif" alt="three hats, a bowler, a flat cap and a floppy hat.">
     </div>
     <p>On the way to home, many monsters were willing to catch Bob. Bob had to escape from monsters' claws. Else, Bob would be the
     dinner of monsters!</p>
@@ -107,16 +107,16 @@
     <a class="control_next">></a>
     <a class="control_prev"><</a>
     <ul>
-        <li style="background: url('images/1.jpg')"></li>
-        <li style="background: url('images/2.jpg')"></li>
-        <li style="background: url('images/3.jpg')"></li>
+        <li style="background: url('../images/1.jpg')"></li>
+        <li style="background: url('../images/2.jpg')"></li>
+        <li style="background: url('../images/3.jpg')"></li>
     </ul>
 </div>
-<script src="js/News.js"></script>
+<script src="../js/News.js"></script>
 
 
-<link href="css/flexslider.css" rel='stylesheet' type='text/css'/>
-<script defer src="js/jquery.flexslider.js"></script>
+<link href="../css/flexslider.css" rel='stylesheet' type='text/css'/>
+<script defer src="../js/jquery.flexslider.js"></script>
 <script type="text/javascript">
     $(function () {
         SyntaxHighlighter.all();
@@ -147,13 +147,13 @@
     <p type="Name:"><input placeholder="Write your name here.."></p>
     <p type="Phone Number:"><input placeholder="Let us know how to message you back.."></p>
     <p type="Password:"><input type="password" placeholder="Set your password"></p>
-    <button onclick="alert('This function will open soon!')">Submit</button>
+    <button>Submit</button>
 
 </form>
 <!---------->
 <!--FOOTER-->
 <!---------->
-<div class="tilt"><img src="images/social.png">
+<div class="tilt"><img src="../images/social.png">
     <div class="socialTypes">
         <p><a href="http://twitter.com">&nbsp;&nbsp;&nbsp; Tweet us on Twitter</a></p>
         <p><a href="http://facebook.com">&nbsp;&nbsp;&nbsp; Follow us on FaceBook</a></p>
@@ -167,8 +167,9 @@
     <p class="footWords">&nbsp;&nbsp;<a href="http://bunnyhsu.github.io">GitHub</a></p>
     <p class="footWords">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Designed by BunnyHsu</p>
 </div>
-<script src="js/index.js"></script>
-
-
+<script src="../js/index.js"></script>
+<script>
+    $(".section5").load("data");
+</script>
 </body>
 </html>

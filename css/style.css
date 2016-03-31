@@ -18,6 +18,19 @@ body, html {
     border:2px solid  white;
     color: white;
 }
+.login #signout
+{
+    background: orangered;
+    border:2px solid  orangered;
+    color: white;
+}
+.login #signout:hover
+{
+    background: orangered;
+    border:2px solid  white;
+    color: white;
+}
+
 .hero-nav {
   position: fixed;
   top: 0;

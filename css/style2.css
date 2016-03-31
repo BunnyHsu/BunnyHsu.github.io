@@ -1,9 +1,14 @@
+/*css of play.html*/
 a {
     text-decoration: none;
 }
 a:hover {
     text-decoration: none;
 }
+body
+ {
+     background: url("../images/backg.jpg");
+ }
 @-webkit-keyframes auto {
     0%
     {
@@ -25,6 +30,8 @@ a:hover {
     }
 }
 .play {
+
+    left: 20%;
     color: white;
     width: 90px;
     height: 90px;
@@ -43,7 +50,7 @@ a:hover {
 }
 
 .info {
-    left: 240px;
+    left: 35%;
     color: white;
     width: 90px;
     height: 90px;
@@ -71,7 +78,7 @@ a:hover {
 
 .href1 {
     color: white;
-    left: 480px;
+    left: 50%;
     width: 90px;
     height: 90px;
     position: absolute;
@@ -99,7 +106,7 @@ a:hover {
 
 .href2 {
     color: white;
-    left: 720px;
+    left: 65%;
     width: 90px;
     height: 90px;
     position: absolute;
@@ -129,14 +136,15 @@ a:hover {
     color: white;
     padding-right: 0px;
     height: 90px;
-    background: #ffffff;
+    background: 0;
 }
 .frame1
 {
-    border-bottom-right-radius: 30%;
-    border-bottom-left-radius: 5%;
-    border-top-left-radius: 5%;
-    border-top-right-radius:5% ;
+    margin-left: 20%;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius:30px ;
     border: hidden;
     box-shadow: lightgray 5px 5px 5px 5px;
 }

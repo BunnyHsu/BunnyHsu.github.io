@@ -1,0 +1,8 @@
+<!--Using AJAX to push this file to logined acount-->
+<form>
+<h2>DONATE</h2>
+    <p type="Name:"><input placeholder="Write your name here.."></p>
+    <p type="Phone Number:"><input placeholder="Let us know how to message you back.."></p>
+    <p type="Amount"><input type="number" placeholder="How much do you want to donate.."></p>
+    <button onclick="alert('success!')">Donate</button>
+</form>

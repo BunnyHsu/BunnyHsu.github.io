@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Login</title>
-    <style>
+     <style>
         @import url(https://fonts.googleapis.com/css?family=Montserrat);
         .login {
         width: 380px;
@@ -71,11 +71,12 @@
 
     </style>
 </head>
+<!--use PHP to make a simple login -->
 <body background="images/backg.jpg">
-<form class="login" >
+<form class="login" method="post" action="login.php">
     <h2>LOG IN</h2>
-    <p type="Name:"><input placeholder="Write signed name here.."></p>
-    <p type="Password:"><input type="password" placeholder="Type your password.."></p>
+    <p type="Name:"><input id="username" name="username" placeholder="Write signed name here.."></p>
+    <p type="Password:"><input id="password" name="password" type="password" placeholder="Type your password.."></p>
     <button>Log in</button>
 </form>
 </body>
